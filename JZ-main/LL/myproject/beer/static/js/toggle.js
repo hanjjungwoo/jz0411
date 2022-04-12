@@ -148,6 +148,7 @@ function openCloseToc() {
           if(document.getElementById('toc-content14').style.display === 'block') {
             document.getElementById('toc-content14').style.display = 'none';
             document.getElementById('toc-toggle14').textContent = '맛집 보러 가기';
+            document.getElementById('toc-wrapper').style.visibilty = 'hidden';
           } else {
             document.getElementById('toc-content14').style.display = 'block';
             document.getElementById('toc-toggle14').textContent = '그만보기';

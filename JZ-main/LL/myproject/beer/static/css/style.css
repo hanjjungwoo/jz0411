@@ -366,8 +366,10 @@ nav a:nth-child(5):hover ~ #indicator
 
 .ver3-wrapper {
     padding-top: 5%;
-    text-align: center;
+    text-align: left;
     background-color: #F5F5F5;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .ver3-result-contain {
@@ -385,7 +387,7 @@ nav a:nth-child(5):hover ~ #indicator
     width: 10vw;
     height: 5vh;
     padding-top: 3vh;
-    text-align: center;
+    text-align: left;
     border-radius:25px ;
     margin-right: 1%;
 }
@@ -398,15 +400,19 @@ nav a:nth-child(5):hover ~ #indicator
     width: 10vw;
     height: 5vh;
     padding-top: 3vh;
-    text-align: center;
+    text-align: left;
     border-radius:25px ;
 }
 .result-h2{
     margin-top: 1%;
+    width: 100%;
+    display: inline-block;
+    padding-left: 2%;
 }
+
 .hotel-img {
-    width: 25vw;
-    height: 45vh;
+    width: 15vw;
+    height: 25vh;
     border-radius: 0.5vw;
     margin-right: 1vw;
 }
@@ -414,12 +420,13 @@ nav a:nth-child(5):hover ~ #indicator
 .hotel-contain {
     display: inline-block;
     width: 62vw;
-    height: 52vh;
+    height: 30vh;
     position: relative;
+    margin-top: 1.5vh;
 }
 .hotel-contain-left {
-    padding-top: 3.5vh;
-    width: 42%;
+    padding-top: 2.5vh;
+    width: 20%;
     background: #e9ecef;
     height: 100%;
     float: left;
@@ -430,8 +437,8 @@ nav a:nth-child(5):hover ~ #indicator
 }
 
 .hotel-contain-right {
-    padding-top: 4.5vh;
-    width: 58%;
+    padding-top: 3.5vh;
+    width: 73%;
     background: #e9ecef;
     height: 100%;
     float: right;
@@ -440,7 +447,7 @@ nav a:nth-child(5):hover ~ #indicator
 }
 .classfication {
     color: #D82148;
-    font-size: 1.6vw;
+    font-size: 1.2vw;
     margin-bottom: 2%;
 }
 .rate-and-review {
@@ -457,18 +464,27 @@ nav a:nth-child(5):hover ~ #indicator
     padding-bottom: 9vh;
 }
 
+.result-wrapper {
+    display: flex;
+    margin-bottom: 4vh
+}
+
+
 .result-img {
     border:1px solid 1px;
-    border-radius: 3vw;
+    border-radius: 2vw;
     display: inline-block;
     text-align:center;
-    width:45vw;
-    height:70vh;
+    min-width:20vw;
+    min-height:35vh;
+    max-width: 20vw;
+    max-height: 35vh;
+
 }
 .hotel-book {
     position: absolute;
     bottom: 0px;
-    right: 0px;
+    right: 0vw;
     background-color: #1C658C;
     width:7vw;
     height: 5vh;
@@ -495,7 +511,7 @@ nav a:nth-child(5):hover ~ #indicator
 .restaurant-book {
     position: absolute;
     bottom: 0px;
-    right: 0px;
+    right: 1%;
     background-color: #1C658C;
     width:7vw;
     height: 5vh;

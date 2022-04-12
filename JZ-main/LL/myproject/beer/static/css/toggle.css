@@ -558,3 +558,27 @@
 #toc-toggle20:hover {
   text-decoration: none;
 }
+
+/* 정렬기준 */
+.sort-contain {
+  padding-left: 10vw;
+}
+
+.toc-sort-ul {
+  list-style: none;
+}
+.toc-sort-ul li {
+  float: left;
+  margin-right: 0.5vw;
+}
+
+.sort-li {
+  font-size:1.1vw;
+  font-weight: bold;
+}
+
+.sort-li-btn:focus {
+  border: solid 2.5px #1C658C;
+  background-color: #d1ecf3;
+  box-sizing: border-box;
+}
