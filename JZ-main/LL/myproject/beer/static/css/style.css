@@ -416,13 +416,19 @@ nav a:nth-child(5):hover ~ #indicator
     border-radius: 0.5vw;
     margin-right: 1vw;
 }
+.restaurant-contain {
+    margin-top: 0;
+}
 
 .hotel-contain {
+    z-index: 1;
     display: inline-block;
     width: 62vw;
     height: 30vh;
     position: relative;
     margin-top: 1.5vh;
+    border: solid 1px slategray;
+    margin-left: 10vw;
 }
 .hotel-contain-left {
     padding-top: 2.5vh;
@@ -665,3 +671,7 @@ footer {
       flex: 2 0px;
     }
   }
+
+.page-btn {
+    display: absolute;
+}

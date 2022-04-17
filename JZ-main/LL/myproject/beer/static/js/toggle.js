@@ -265,3 +265,20 @@ function openCloseToc() {
               document.getElementById('toc-toggle20').textContent = '그만보기';
             }
           }
+function moveDown1() {
+  document.querySelector(".restaurant-contain").classList.add("go");
+}
+function moveDown2() {
+  document.querySelector(".restaurant-contain").classList.add("go1");
+}
+function moveDown3() {
+  document.querySelector(".restaurant-contain").classList.add("go2");
+}
+function moveDown4() {
+  document.querySelector(".restaurant-contain").classList.add("go3");
+}
+
+
+function moveUp() {
+  document.querySelector(".restaurant-contain").classList.add("down");
+}

@@ -370,10 +370,10 @@
   text-decoration: none;
 }
 #toc-content14 {
-  overflow: scroll;
+  overflow: hidden;
   display: none;
   background-color: #e9ecef;
-  height: 65vh;
+  height: 62vh;
   padding-top: 5vh;
   padding-bottom: 5vh;
   text-align: center;
@@ -562,6 +562,11 @@
 /* 정렬기준 */
 .sort-contain {
   padding-left: 10vw;
+  position: absolute;
+  left: 0;
+  top:  118vh;
+  z-index: 1000;
+  width: 100%;
 }
 
 .toc-sort-ul {
@@ -581,4 +586,62 @@
   border: solid 2.5px #1C658C;
   background-color: #d1ecf3;
   box-sizing: border-box;
+}
+
+
+.go {
+  transform: translateY(-25vh);
+}
+.go1 {
+  transform: translateY(-50vh);
+}
+.go2 {
+  transform: translateY(-75vh);
+}
+.go3 {
+  transform: translateY(-100vh);
+}
+
+.down {
+  transform: translateY(35vh);
+}
+
+
+.nav-sort-contain {
+  display:block;
+  text-align: left;
+  width: 8vw;
+  top: 47.7%;
+  border: solid 1px slategray;
+  position: relative;
+  margin-left: 5vw;
+
+}
+.nav-sort-ul {
+  /* text-align: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: solid 1px slategray; */
+  display:block;
+  text-align: left;
+  width: 8vw;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  top: 47.6%;
+  border: solid 1px slategray;
+  position: relative;
+  margin-left: 5vw;
+  background-color: #B8B783;
+}
+
+.nav-sort-ul li {
+  text-align: left;
+  display: block;
+  border-bottom: solid 1px slategray;
+}
+
+.nav-sort-ul li:last-child {
+  border-bottom: none;
 }

@@ -19,6 +19,7 @@
     <script src="https://vjs.zencdn.net/7.1.0/video.js"></script>
     <script src="../../static/js/videojs-pannellum-plugin.js"></script>
     <script src="../../static/js/toggle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href={% static 'css/style.css' %}>
     <link rel="stylesheet" href={% static 'css/reset.css' %}>
@@ -76,28 +77,72 @@
                             <li><button class="sort-li-btn">추천</button></li>
                             <li><button class="sort-li-btn">추천</button></li>
                             <li><button class="sort-li-btn">추천</button></li>
+                            <li><button class="page-btn" onclick="moveDown1()">1</button></li>
+                            <li><button class="page-btn" onclick="moveDown2()">2</button></li>
+                            <li><button class="page-btn" onclick="moveDown3()">3</button></li>
+                            <li><button class="page-btn" onclick="moveDown4()">4</button></li>
+                            <li><button class="page-btn" onclick="moveUp()">이전</button></li>
                         </ul>
                         <br/>
                 </div>
-                    {% if restaurant1.count > 0 %}
-                    {% for a in restaurant1 %}
-                <div class="hotel-contain">
-                    <div class="hotel-contain-left">
-                        <a href='{{a.url}}'><img class="hotel-img" src="static/mg/restaurant/{{ a.name }}.jpg"
-                                alt="사진은 수집중입니다😢"></a><br><br>
+                {% comment %} <ul class="nav-sort-ul">
+                    <li>인기 필터</li>
+                    <li>호텔</li>
+                    <li>게스트하우스</li>
+                    <li>호스텔</li>
+                    <li>펜션</li>
+                    <li>아파트호텔</li>
+                    <li>아파트</li>
+                    <li>모텔</li>
+                    <li>리조트</li>
+                    <li>베드앤브렉퍼스트</li>
+                    <li>홈스테이</li>
+                    <li>롯지</li>
+                    <li>컨트리하우스</li>
+                    <li>빌라</li>
+                    <li>여관</li>
+                    <li>캠프장</li>
+                </ul> {% endcomment %}
+                <div class="restaurant-contain">
+                        {% if restaurant1.count > 0 %}
+                        {% for a in restaurant1 %}
+                    <div class="hotel-contain">
+                        <div class="hotel-contain-left">
+                            <a href='{{a.url}}'><img class="hotel-img" src="static/mg/restaurant/{{ a.name }}.jpg"
+                                    alt="사진은 수집중입니다😢"></a><br><br>
+                        </div>
+                        <div class="hotel-contain-right">
+                            <h1>{{a.name}}</h1>
+                            <div class="classfication">{{a.classfications}}</div>
+                            <p class="rate-and-address">💗{{a.rating}} 📮주소 {{a.address}} </p>
+                            <p class="restaurant-hour">⏰영업시간{{a.hour}}</p>
+                            <a href='{{a.url}}' class="restaurant-book">정보보기</a>
+                        </div>
+                        <hr width="100%" style="text-align:left">
                     </div>
-                    <div class="hotel-contain-right">
-                        <h1>{{a.name}}</h1>
-                        <div class="classfication">{{a.classfications}}</div>
-                        <p class="rate-and-address">💗{{a.rating}} 📮주소 {{a.address}} </p>
-                        <p class="restaurant-hour">⏰영업시간{{a.hour}}</p>
-                        <a href='{{a.url}}' class="restaurant-book">정보보기</a>
+                    {% endfor %}
+                    {% endif %}
+                    </p>
+                    <div class="pagination">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#" class="active">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a href="#">&gt;</a>
+                        <a href="#">&raquo;</a>
                     </div>
-                    <hr width="100%" style="text-align:left">
+                    <button class="page-btn" onclick=(.transform.translateY(""))><button>
                 </div>
-                {% endfor %}
-                {% endif %}
-                </p>
+                <div>
+                    
+                
+                </div>
             </div>
             <div id="toc-content">
                 <video id="result0" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none"
@@ -146,6 +191,7 @@
                 </p>
             </div>
         </div>
+
         <div class="ver3-result-contain">
             <div>
                 <h1>두 번째 추천 여행지는 {{ result.1 }} 입니다.</h1>

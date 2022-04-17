@@ -26,6 +26,22 @@ import random
 from .models import *
 from user.models import User
 
+#페이징 처리
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.utils import timezone
+from django.urls import reverse
+from django.core.paginator import Paginator
+
+def index(request):
+    all_boards = Board.objects.all().order_by("-pub_date") # 모든 데이터 조회, 내림차순(-표시) 조회
+    paginator = Paginator(all_boards, 5)
+    page = int(request.GET.get('page', 1))
+    board_list = paginator.get_page(page)
+
+    return render(request, 'board/index.html', {'title':'Board List', 'board_list':board_list})
+
+
 # # 회원가입
 # def register(request):
 #     register_form = RegisterForm()
