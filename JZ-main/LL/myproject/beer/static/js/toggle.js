@@ -282,3 +282,41 @@ function moveDown4() {
 function moveUp() {
   document.querySelector(".restaurant-contain").classList.add("down");
 }
+
+
+// 리스트
+const items = document.querySelectorAll('.question');
+
+function openCloseAnswer() {
+  const answerId = this.id.replace('que', 'ans');
+
+  if(document.getElementById(answerId).style.display === 'block') {
+    document.getElementById(answerId).style.display = 'none';
+    document.getElementById(this.id + '-toggle').textContent = '+';
+  } else {
+    document.getElementById(answerId).style.display = 'block';
+    document.getElementById(this.id + '-toggle').textContent = '-';
+  }
+}
+
+items.forEach(item => item.addEventListener('click', openCloseAnswer));
+
+
+//제이쿼리
+$("span[name='toggle-control']").click(function() { 
+
+  $('#target').toggle();
+
+  $("span[name='toggle-control']").toggle();
+
+});
+
+function clickshow(elem,ID) {
+  var menu = document.getElementById(ID);
+  if (elem.className !='closed') {
+     elem.className = 'closed';
+     menu.style.display = "none";
+  } else {
+     elem.className ='opened';
+     menu.style.display ="block";
+ }}

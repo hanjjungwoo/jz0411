@@ -20,12 +20,20 @@
     <script src="../../static/js/videojs-pannellum-plugin.js"></script>
     <script src="../../static/js/toggle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href={% static 'css/style.css' %}>
     <link rel="stylesheet" href={% static 'css/reset.css' %}>
     <link rel="stylesheet" href={% static 'css/toggle.css' %}>
     <link rel="icon"type="image/x-icon" href={% static 'favicon/favicon.ico' %}>
 
+    
+    {% comment %} <script type="text/javascript">
+        $(widow).scroll(function(){
+            var scrT=$(window).scrollTop();
+            if(srcT ==$('#toc-content14').height()-$(window).height()){
+                alert('Here is Bottom of This Page');
+            }
+        })
+    </script> {% endcomment %}
     <style>
         h1 {
             color: #000;
@@ -69,40 +77,6 @@
                 </h2>
             </div>
             <div id="toc-content14">
-                <div class="sort-contain">
-                        <ul class="toc-sort-ul">
-                            <li class="sort-li">정렬기준</li>
-                            <li><button class="sort-li-btn">추천</button></li>
-                            <li><button class="sort-li-btn">추천</button></li>
-                            <li><button class="sort-li-btn">추천</button></li>
-                            <li><button class="sort-li-btn">추천</button></li>
-                            <li><button class="sort-li-btn">추천</button></li>
-                            <li><button class="page-btn" onclick="moveDown1()">1</button></li>
-                            <li><button class="page-btn" onclick="moveDown2()">2</button></li>
-                            <li><button class="page-btn" onclick="moveDown3()">3</button></li>
-                            <li><button class="page-btn" onclick="moveDown4()">4</button></li>
-                            <li><button class="page-btn" onclick="moveUp()">이전</button></li>
-                        </ul>
-                        <br/>
-                </div>
-                {% comment %} <ul class="nav-sort-ul">
-                    <li>인기 필터</li>
-                    <li>호텔</li>
-                    <li>게스트하우스</li>
-                    <li>호스텔</li>
-                    <li>펜션</li>
-                    <li>아파트호텔</li>
-                    <li>아파트</li>
-                    <li>모텔</li>
-                    <li>리조트</li>
-                    <li>베드앤브렉퍼스트</li>
-                    <li>홈스테이</li>
-                    <li>롯지</li>
-                    <li>컨트리하우스</li>
-                    <li>빌라</li>
-                    <li>여관</li>
-                    <li>캠프장</li>
-                </ul> {% endcomment %}
                 <div class="restaurant-contain">
                         {% if restaurant1.count > 0 %}
                         {% for a in restaurant1 %}
@@ -123,21 +97,6 @@
                     {% endfor %}
                     {% endif %}
                     </p>
-                    <div class="pagination">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#" class="active">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
-                        <a href="#">7</a>
-                        <a href="#">8</a>
-                        <a href="#">9</a>
-                        <a href="#">10</a>
-                        <a href="#">&gt;</a>
-                        <a href="#">&raquo;</a>
-                    </div>
-                    <button class="page-btn" onclick=(.transform.translateY(""))><button>
                 </div>
                 <div>
                     
@@ -423,6 +382,17 @@
                     {% endif %}
                     </p>
                 </div>
+        </div>
+        <div>
+            연습
+            <h3 class="closed" onclick="clickshow(this,'categories')">처음에는 닫힌 폴더</h3>
+            <div id="categories" style="display: none;">
+            <ol>
+            <li>첫번째 요소</li>
+            <li>두번째 요소</li>
+            <li>그럼 안녕</li>
+            </ol>
+            </div>
         </div>
     </div>
     <div class="footer">

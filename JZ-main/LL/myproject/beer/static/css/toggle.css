@@ -370,7 +370,7 @@
   text-decoration: none;
 }
 #toc-content14 {
-  overflow: hidden;
+  overflow: scroll;
   display: none;
   background-color: #e9ecef;
   height: 62vh;
@@ -603,7 +603,7 @@
 }
 
 .down {
-  transform: translateY(35vh);
+  transform: translateY(15vh);
 }
 
 

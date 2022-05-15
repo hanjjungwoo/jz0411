@@ -5,6 +5,7 @@ urlpatterns = [
     path('ver1', views.ver1, name='ver1'),
     path('ver3', views.ver3, name='ver3'),
     path('hotel', views.hotel, name='hotel'),
+    
     # path('login', views.login, name='login'),
     # path('logout', views.logout, name='logout'),
     # path('register', views.register, name='register')

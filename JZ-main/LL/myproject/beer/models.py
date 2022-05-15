@@ -115,7 +115,7 @@ class DjangoSession(models.Model):
 
 
 class Hotel(models.Model):
-    index = models.IntegerField(primary_key=True)
+    num = models.IntegerField(primary_key=True)
     locate = models.TextField(blank=True, null=True)
     name = models.TextField(blank=True, null=True)
     rating = models.FloatField(blank=True, null=True)
