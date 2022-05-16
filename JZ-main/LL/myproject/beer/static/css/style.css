@@ -699,14 +699,14 @@ footer {
     background-color: #fff;
     overflow:hidden;
     height: 50vh;
-    width: 1050px;
+    width: 48vw;
     display: flex;
 }
 .ver3-form-in {
     box-sizing: border-box;
     padding-top: 8%;
     text-align: center;
-    width: 1050px;
+    width: 48vw;
     height: 50vh;
     border: 1px solid #000;
 }
