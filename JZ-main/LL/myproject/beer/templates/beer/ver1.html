@@ -66,6 +66,11 @@
             padding-right: 4%;
         }
     </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6672621543823482"crossorigin="anonymous">
+    </script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
 </head>
 
 <body>
@@ -87,46 +92,82 @@
     <div class="header">
         <a class="header-a" onclick="location.href='/'">너와 나드리</a>
     </div>
-    <div class="ver1-header">
-        <h1 style="padding-top:3%;">경험했던 여행지 중 다시 가고싶은 여행지를 선택해주세요.
-            비슷한 여행지를 추천해 드립니다.
-        </h1>
-        <form method="POST" style="text-align:center;">
-            <br>
-            {% csrf_token %}
-            {% comment %} 아이디 :
-            <input type="text" name="name"><br><br> {% endcomment %}
-
-            여행지 :
-            <select name="beer" style="margin-top:5%">
-                {% for tmp in beer_list %}
-                <option value='{{tmp}}'>{{tmp}}</option>
-                {% endfor %}
-            </select><br><br>
-            {% comment %} 취향 :
-            <select name="detail">
-                <option value="nature">자연경관</option>
-                <option value="culture">문화유산</option>
-                <option value="traffic">교통</option>
-                <option value="sleep">숙박시설</option>
-                <option value="food">음식</option>
-                <option value="shopping">쇼핑</option>
-                <option value="inform">안내시설</option>
-                <option value="conv">편의시설</option>
-                <option value="kind">관광종사자 친절도</option>
-                <option value="active">체험프로그램</option>
-                <option value="cost">물가</option>
-                <option value="busy">혼잡도</option> {% endcomment %}
-
-
-            </select><br />
-            <input class="btn-submit" type="submit" value="Pick!">
+    <div class="ver1-contain" >
+        <form method="POST" id="ver1-form">
+            <div class="ques-1">
+              <div class="form-qeus">어디를 방문했나요?</div>
+              <input type="text" name="여행지">
+            </div>
+            <div class="ques-2">
+              <div class="form-qeus">어떤 목적으로 방문했나요?</div>
+              <div class="ver1-survey-contain">
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="food"><span>혼자</span></label>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="walk"><span>데이트</span></label>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="nature"><span>가족</span></label>
+                <br>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="date"><span>이국적</span></label>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="sleep"><span>전통</span></label>
+                <br>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="fori"><span>산책</span></label>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="sns"><span>드라이브</span></label>
+                <br>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="family"><span>먹방</span></label>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="view"><span>사진</span></label>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="view"><span>휴식</span></label>
+                <br>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="view"><span>도심</span></label>
+                <label class="form-label"><input onclick="CountChecked(this)" type="checkbox" name="detail"
+                        value="view"><span>자연</span></label>
+                <br>
+              </div>
+            </div>
+            <input type="submit" value="완 료 하 기" />
         </form>
+    </div>
+    <div class="ver1-review-contain">
+      <form class="review-form">
+        <div class="ques-1">
+          <div class="form-qeus">어디를 방문했나요?</div>
+        </div>
+        <fieldset>
+          <span class="text-bold">별점을 선택해주세요</span>
+          <input type="radio" name="reviewStar" value="1" id="rate1"><label for="rate1">★</label>
+          <input type="radio" name="reviewStar" value="2" id="rate2"><label for="rate2">★</label>
+          <input type="radio" name="reviewStar" value="3" id="rate3"><label for="rate3">★</label>
+          <input type="radio" name="reviewStar" value="4" id="rate4"><label for="rate4">★</label>
+          <input type="radio" name="reviewStar" value="5" id="rate5"><label for="rate5">★</label>
+        </fieldset>
+        <div>
+          <textarea class="col-auto form-control" type="text" id="reviewContents"
+                placeholder="좋은 리뷰를 남겨주시면 포인트를 적립해드립니다 ! !"></textarea>
+        </div>
+        <input type="submit" value="완 료 하 기" />	
+      <form>
+
     </div>
     <div id='contents' style="text-align:center; opacity:0.5; background-color:#F5F5F5; padding-top:10%;">
         <img id="mg1" src="static/mg/airplane2.jpg">
     </div>
     </div>
+
+    <ins class="adsbygoogle"
+     style="display:block; z-index:1000;"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-6672621543823482"
+     data-ad-slot="2683442818">
+    </ins>
+
     <footer class="footer" style="margin-top:5vh;">
         <div class="footer-addr">
           <div style="text-align:left">
