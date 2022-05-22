@@ -47,6 +47,7 @@ a{color:inherit;text-decoration:none}
 }
 .join-form {
 	width:100%;
+    height: 120%;
 	margin:auto;
 	max-width:525px;
 	min-height:670px;
@@ -57,9 +58,9 @@ a{color:inherit;text-decoration:none}
 }
 .join-html{
     width:100%;
-	height:100%;
+    height: 100%;
 	position:absolute;
-	padding:90px 70px 50px 70px;
+	padding:40px 70px 50px 70px;
 	background:rgba(95, 163, 168, 0.9);
     border-radius: 2vw;
 }
@@ -79,7 +80,7 @@ a{color:inherit;text-decoration:none}
 }
 input[type=text] {
     border:none;
-    width: 22vw;
+    width: 100%;
 	padding:15px 20px;
 	border-radius:25px;
     background-color: #ffffff1a;
@@ -88,7 +89,7 @@ input[type=text] {
 }
 input[type=password] {
     border:none;
-    width: 22vw;
+    width: 100%;
 	padding:15px 20px;
 	border-radius:25px;
     background-color: #ffffff1a;
@@ -97,30 +98,34 @@ input[type=password] {
 }
 input[type=email]{
     border:none;
-    width: 22vw;
+    width: 100%;
 	padding:15px 20px;
 	border-radius:25px;
     background-color: #ffffff1a;
     color:#aaa;
     margin-bottom: 2vh;
 }
-.form-btn {
+
+
+.login-join button{
     outline: 0;
     border: 0;
-    width: 22vw;
+    width: 100%;
     height: 5vh;
     border-radius: 1vw;
     box-sizing: border-box;
     font-family: "jua";
-    font-size: 1.2vw;
+    font-size: 150%;
+    padding-top: 1%;
 }
-.form-a {
+
+.login-join a {
     margin-top: 2vh;
     display: inline-block;
     text-decoration: none !important;
     outline: 0;
     border: 0;
-    width: 22vw;
+    width: 100%;
     height: 5vh;
     border-radius: 1vw;
     background-color: #efefef;
@@ -128,7 +133,7 @@ input[type=email]{
     text-align: center;
     box-sizing: border-box;
     font-family: "jua";
-    font-size: 1.2vw;
+    font-size: 150%;
 }
 
 /*설문조사폼*/

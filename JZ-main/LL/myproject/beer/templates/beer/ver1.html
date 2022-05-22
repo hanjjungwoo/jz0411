@@ -93,10 +93,14 @@
         <a class="header-a" onclick="location.href='/'">너와 나드리</a>
     </div>
     <div class="ver1-contain" >
-        <form method="POST" id="ver1-form">
+        <form method="POST" id="ver1-form" onsubmit="return confirm('설문에 응해주셔서 감사합니다😊');">
             <div class="ques-1">
               <div class="form-qeus">어디를 방문했나요?</div>
-              <input type="text" name="여행지">
+                <select class="ver3-destination-detail" name="bear">
+                  {% for tmp in beer_list %}
+                  <option value='{{tmp}}'>{{tmp}}</option>
+                  {% endfor %}
+                </select>
             </div>
             <div class="ques-2">
               <div class="form-qeus">어떤 목적으로 방문했나요?</div>
@@ -136,21 +140,26 @@
         </form>
     </div>
     <div class="ver1-review-contain">
-      <form class="review-form">
+      <form class="review-form" onsubmit="return confirm('리뷰를 작성해주셔서 감사합니다😊');">
         <div class="ques-1">
           <div class="form-qeus">어디를 방문했나요?</div>
+          <select class="ver3-destination-detail" name="beer">
+            {% for tmp in beer_list %}
+            <option value='{{tmp}}'>{{tmp}}</option>
+            {% endfor %}
+          </select>
         </div>
         <fieldset>
           <span class="text-bold">별점을 선택해주세요</span>
-          <input type="radio" name="reviewStar" value="1" id="rate1"><label for="rate1">★</label>
-          <input type="radio" name="reviewStar" value="2" id="rate2"><label for="rate2">★</label>
+          <input type="radio" name="reviewStar" value="5" id="rate1"><label for="rate1">★</label>
+          <input type="radio" name="reviewStar" value="4" id="rate2"><label for="rate2">★</label>
           <input type="radio" name="reviewStar" value="3" id="rate3"><label for="rate3">★</label>
-          <input type="radio" name="reviewStar" value="4" id="rate4"><label for="rate4">★</label>
-          <input type="radio" name="reviewStar" value="5" id="rate5"><label for="rate5">★</label>
+          <input type="radio" name="reviewStar" value="2" id="rate4"><label for="rate4">★</label>
+          <input type="radio" name="reviewStar" value="1" id="rate5"><label for="rate5">★</label>
         </fieldset>
         <div>
           <textarea class="col-auto form-control" type="text" id="reviewContents"
-                placeholder="좋은 리뷰를 남겨주시면 포인트를 적립해드립니다 ! !"></textarea>
+                placeholder="좋은 리뷰를 남겨주시면 감사하겠습니다."></textarea>
         </div>
         <input type="submit" value="완 료 하 기" />	
       <form>
